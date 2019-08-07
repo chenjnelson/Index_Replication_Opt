@@ -17,13 +17,13 @@ where:
 
 and 
 
-![] (https://latex.codecogs.com/gif.latex?y_j%20%3D%201%20%5C%20if%20%5C%20the%20%5C%20stock%20%5C%20j%20%5C%20is%20%5C%20in%20%5C%20the%20%5C%20fund%2C%20%5C%20else%20%5C%200)
+![](https://latex.codecogs.com/gif.latex?y_j%20%3D%201%20%5C%20if%20%5C%20the%20%5C%20stock%20%5C%20j%20%5C%20is%20%5C%20in%20%5C%20the%20%5C%20fund%2C%20%5C%20else%20%5C%200)
 
 We assume that we do not need to rebalance for the time being, and that correlation holds for the duration of that time. Of course there will be tracking error, but systematic indexing actually elicits a balancing act, in my opinion. There are many different industry practices, and this is just one approach.
 
 For this exercise, we will extract financial data from QQQ, representing 100 large names. We will choose an arbitrary number of stocks for our index replication (* n*, which for visualization purposes I will use 50) and also view how the similarity metric impacts the tracking. The similarity score I will evaluate on is covariance (Fund 1) as well as correlation (Fund 2). The fraction of the stock to be invested is in proportion to the stock's weight.
 
-![Passive strategies relative to the index](https://github.com/njinchen/Index_Replication_Opt/Output.png)
+![Passive strategies relative to the index](https://github.com/njinchen/Index_Replication_Opt/blob/master/Output.png)
 
 An intuitive explanation is that correlation as a similarity metric would track better than covariance to the index, as the values are scaled by the respective standard deviations. Thus, the weights are less overrepresented. Toying around with *n* as well as the lookback to calculate a similarity score also comes into question. 
 
